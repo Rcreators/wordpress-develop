@@ -1574,7 +1574,7 @@ function do_accordion_sections( $screen, $context, $data_object ) {
 					?>
 					<li class="control-section accordion-section <?php echo $hidden_class; ?> <?php echo $open_class; ?> <?php echo esc_attr( $box['id'] ); ?>" id="<?php echo esc_attr( $box['id'] ); ?>">
 						<h3 class="accordion-section-title hndle" tabindex="0">
-							<button type="button" class="accordion-trigger">
+							<button type="button" class="accordion-trigger" tabindex="-1">
 								<span class="accordion-title">
 									<?php echo esc_html( $box['title'] ); ?>
 									<span class="screen-reader-text" aria-hidden="true">

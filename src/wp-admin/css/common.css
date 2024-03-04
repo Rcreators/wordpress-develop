@@ -2437,7 +2437,8 @@ h1.nav-tab-wrapper, /* Back-compat for pre-4.4 */
 }
 .nav-menus-php .metabox-holder .accordion-section-title:focus span.dashicons.dashicons-arrow-down,
 .nav-menus-php .metabox-holder .accordion-section-title:hover span.dashicons.dashicons-arrow-down {
-	outline: 1px solid #2271b1;
+	box-shadow: 0 0 0 1px #4f94d4, 0 0 2px 1px rgba(79, 148, 212, 0.8);
+	color: #1d2327;
 }
 .nav-menus-php .metabox-holder .accordion-section-title::after {
 	display: none;
