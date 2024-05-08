@@ -338,6 +338,8 @@ window.wp = window.wp || {};
 		// Remove the ID from the copied row and let the `for` attribute reference the hidden ID.
 		$( 'td', editRow ).find('#quick-edit-legend').removeAttr('id');
 		$( 'td', editRow ).find('p[id^="quick-edit-"]').removeAttr('id');
+		$( 'td', editRow ).find('input[id^="in-category-"]').removeAttr('id');
+		if ( t.type === 'page' ) $( 'td', editRow ).find('select[id="post_parent"]').removeAttr('id');
 
 		$(t.what+id).removeClass('is-expanded').hide().after(editRow).after('<tr class="hidden"></tr>');
 
