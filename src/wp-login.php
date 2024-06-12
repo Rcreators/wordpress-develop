@@ -990,8 +990,9 @@ switch ( $action ) {
 		 */
 		do_action( 'validate_password_reset', $errors, $user );
 
-		if( isset( $_GET['user'] ) )
+		if ( isset( $_GET['user'] ) ) {
 			$username = wp_unslash( $_GET['user'] );
+		}
 
 		if ( ( ! $errors->has_errors() ) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ) ) {
 			reset_password( $user, $_POST['pass1'] );
@@ -999,7 +1000,7 @@ switch ( $action ) {
 			login_header(
 				__( 'Password Reset' ),
 				wp_get_admin_notice(
-					__( 'Your password has been reset.' ) . ' <a href="' . esc_url( wp_login_url() ) . "?" . 'user=' . $username . '">' . __( 'Log in' ) . '</a>',
+					__( 'Your password has been reset.' ) . ' <a href="' . esc_url( wp_login_url() ) . '?' . 'user=' . $username . '">' . __( 'Log in' ) . '</a>',
 					array(
 						'type'               => 'info',
 						'additional_classes' => array( 'message', 'reset-pass' ),
@@ -1025,8 +1026,9 @@ switch ( $action ) {
 			$errors
 		);
 
-		if( isset( $_GET['user'] ) )
+		if ( isset( $_GET['user'] ) ) {
 			$username = wp_unslash( $_GET['user'] );
+		}
 		?>
 		<form name="resetpassform" id="resetpassform" action="<?php echo esc_url( network_site_url( 'wp-login.php?action=resetpass&user=' . $username, 'login_post' ) ); ?>" method="post" autocomplete="off">
 			<input type="hidden" id="user_login" value="<?php echo esc_attr( $rp_login ); ?>" autocomplete="off" />
@@ -1504,7 +1506,7 @@ switch ( $action ) {
 		}
 
 		wp_enqueue_script( 'user-profile' );
-		if( isset( $_GET['user'] ) ) {
+		if ( isset( $_GET['user'] ) ) {
 			$user_login = wp_unslash( $_GET['user'] );
 		}
 		?>
