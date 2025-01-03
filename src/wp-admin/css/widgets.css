@@ -739,6 +739,13 @@ div#widgets-right .widget-top:hover,
 	left: 5px;
 }
 
+.widgets-chooser .widgets-chooser-order {
+	padding: 10px 0 12px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
 .widgets-chooser .widgets-chooser-actions {
 	padding: 10px 0 12px;
 	text-align: center;

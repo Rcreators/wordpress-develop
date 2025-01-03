@@ -569,6 +569,12 @@ foreach ( $theme_sidebars as $sidebar => $registered_sidebar ) {
 
 <div class="widgets-chooser">
 	<ul class="widgets-chooser-sidebars"></ul>
+	<div class="widgets-chooser-order">
+		<lable for="widget-order">Order</lable>
+		<select id="widget-order" class="widefat" name="widget-order">
+			
+		</select>
+	</div>
 	<div class="widgets-chooser-actions">
 		<button class="button widgets-chooser-cancel"><?php _e( 'Cancel' ); ?></button>
 		<button class="button button-primary widgets-chooser-add"><?php _e( 'Add Widget' ); ?></button>
